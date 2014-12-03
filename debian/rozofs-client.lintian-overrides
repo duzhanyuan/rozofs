@@ -1,0 +1,3 @@
+## linked to external package "fuse":
+package-contains-broken-symlink sbin/mount.rozofs mount.fuse
+package-contains-broken-symlink usr/share/man/man8/mount.rozofs.8.gz mount.fuse.8.gz

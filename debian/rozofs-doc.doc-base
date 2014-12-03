@@ -1,0 +1,8 @@
+Document: rozofs-doc
+Title: RozoFS documentation
+Abstract: This document describes RozoFS.
+Section: System/Administration
+
+Format: HTML
+Index: /usr/share/doc/rozofs-doc/html/index.html
+Files: /usr/share/doc/rozofs-doc/html/*

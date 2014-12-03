@@ -1,5 +1,5 @@
-rozofs (1.5.4) stable; urgency=low
+rozofs (1.5.4-1) unstable; urgency=low
 
-  * (rozofs) See git log for changes
+  Initial release (Closes: #______).
 
- -- Fizians S.A.S. <devel@rozofs.com>  Mon, 01 Jan 2014 00:00:00 +0100
+ -- Dmitry Smirnov <onlyjob@debian.org>  Tue, 11 Nov 2014 03:42:41 +1100

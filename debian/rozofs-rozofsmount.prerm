@@ -1,6 +1,0 @@
-#!/bin/sh
-set -e
-# Try to unmount RozoFS mountpoints
-if [ -x "/etc/init.d/rozofs-rozofsmount" ]; then
-	invoke-rc.d rozofs-rozofsmount stop 2>&1 || exit 0
-fi

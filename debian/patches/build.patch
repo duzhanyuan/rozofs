@@ -1,0 +1,30 @@
+Last-Update: 2014-11-11
+Forwarded: no
+Author: Dmitry Smirnov <onlyjob@member.fsf.org>
+Description: fix build
+
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -108,9 +108,8 @@
+ 
+ configure_file("${PROJECT_SOURCE_DIR}/cmake/config.h.in" "${PROJECT_BINARY_DIR}/config.h")
+ configure_file("${PROJECT_SOURCE_DIR}/cmake/uninstall.in" "${PROJECT_BINARY_DIR}/uninstall.cmake" @ONLY)
+ configure_file("${PROJECT_SOURCE_DIR}/cmake/debian.in" "${PROJECT_BINARY_DIR}/debian.cmake" @ONLY)
+-configure_file("${PROJECT_SOURCE_DIR}/cmake/debian.changelog.in" "${PROJECT_SOURCE_DIR}/debian/changelog" @ONLY)
+ configure_file("${PROJECT_SOURCE_DIR}/cmake/redhat.in" "${PROJECT_BINARY_DIR}/redhat.cmake" @ONLY)
+ configure_file("${PROJECT_SOURCE_DIR}/cmake/rozofs.spec.in" "${PROJECT_BINARY_DIR}/rozofs.spec" @ONLY)
+ configure_file("${PROJECT_SOURCE_DIR}/cmake/doxyfile.in" "${PROJECT_BINARY_DIR}/doc/doxyfile" IMMEDIATE @ONLY)
+ configure_file("${PROJECT_SOURCE_DIR}/cmake/setup.py.in" "${PROJECT_BINARY_DIR}/manager/setup.py" @ONLY)
+--- a/manager/CMakeLists.txt
++++ b/manager/CMakeLists.txt
+@@ -15,9 +15,9 @@
+ # <http://www.gnu.org/licenses/>.
+ 
+ if (NOT PYTHON_NOTFOUND)
+ 
+-    set(DEPS        "${CMAKE_CURRENT_SOURCE_DIR}/rozofs/__init__.py")
++#    set(DEPS        "${CMAKE_CURRENT_SOURCE_DIR}/rozofs/__init__.py")
+     set(OUTPUT      "${CMAKE_CURRENT_BINARY_DIR}/timestamp")
+ 
+     add_custom_command(OUTPUT ${OUTPUT}
+                        COMMAND ${PYTHON} setup.py --quiet build

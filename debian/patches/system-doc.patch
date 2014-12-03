@@ -1,0 +1,18 @@
+Last-Update: 2014-12-01
+Forwarded: not-needed
+Author: Dmitry Smirnov <onlyjob@member.fsf.org>
+Description: use system "python-sphinx-rtd-theme", not bundled one.
+
+--- a/doc/users_guide_sphinx/conf.py
++++ b/doc/users_guide_sphinx/conf.py
+@@ -103,9 +103,9 @@
+ # Add any paths that contain custom themes here, relative to this directory.
+ #html_theme_path = []
+ 
+ html_theme = "sphinx_rtd_theme"
+-html_theme_path = ["_themes", ]
++html_theme_path = ["/usr/lib/python2.7/dist-packages", ]
+ 
+ # The name for this set of Sphinx documents.  If None, it defaults to
+ # "<project> v<release> documentation".
+ #html_title = None
